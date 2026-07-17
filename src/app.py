@@ -521,7 +521,7 @@ with tab_chat:
     st.caption("KLUE-BERT 임베딩 + ChromaDB 벡터검색 + Groq AI 기반 RAG 챗봇")
 
     if not groq_api_key:
-        st.warning("左侧 사이드바에서 **Groq API Key**를 입력해 주세요. https://console.groq.com 에서 무료 발급 가능합니다.")
+        st.warning("좌측 사이드바에서 **Groq API Key**를 입력해 주세요. https://console.groq.com 에서 무료 발급 가능합니다.")
         st.stop()
 
     import chromadb
@@ -531,7 +531,7 @@ with tab_chat:
     def load_rag():
         client = chromadb.PersistentClient(path=CHROMA_PATH)
         collection = client.get_collection(name=COLLECTION_NAME)
-        encoder = SentenceTransformer(EMBED_MODEL)
+        encoder = SentenceTransformer(EMBED_MODEL, trust_remote_code=True)
         return collection, encoder
 
     try:
