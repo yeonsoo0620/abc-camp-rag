@@ -1,9 +1,10 @@
-# Excel / PowerPoint 등 Office 문서
+# Excel 문서 (데이터 분석용 제외)
 *.xlsx
 *.xls
 *.xlsm
 *.xlsb
-*.pptx
+
+# PowerPoint (분석 리포트 제외)
 *.ppt
 *.pptm
 
