@@ -1,0 +1,39 @@
+# Excel / PowerPoint 등 Office 문서
+*.xlsx
+*.xls
+*.xlsm
+*.xlsb
+*.pptx
+*.ppt
+*.pptm
+
+# 숨김 파일 및 폴더 (단, .git, .gitignore, .streamlit은 예외)
+.*
+!.gitignore
+!.streamlit/
+
+# opencode 스킬 (대시보드 프로젝트와 무관)
+.agents/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# 로그 파일
+*.log
+
+# Office 임시 파일 (~$ 접두사)
+~$*
